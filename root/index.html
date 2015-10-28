@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html data-ng-app="camTaylorWeddingApp">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Cam & Taylor Wedding</title>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen, handheld" />
+        <link rel="stylesheet" type="text/css" href="enhanced.css" media="screen  and (min-width: 40.5em)" />
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.js"></script>
+        <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    </head>
+    
+    <body data-ng-controller="MainController">
+        <main>
+            <div class="jumbotron"></div>
+            <h1>{{test}}</h1>
+            <ul class="nav">
+                <a href="#/RSVP"><li>RSVP</li></a>
+                <a href="#/Location/"><li>Location</li></a>
+                <li><button id="facebookBtn" ng-click="facebookLogin()">Login with Facebook</button></li>
+                <a href="#/Registry"><li>Registry</li></a>
+                <a href="#/Contact"><li>Contact</li></a>
+            </ul>
+            <div class="borderGlif"></div>
+            <div class="templateContent" ng-view></div>
+        </main>
+        <script src="js/app.js"></script>
+        <script src="js/MainController.js"></script>
+        <script src="template/Contact/ContactController.js"></script>
+        <script src="template/Location/LocationController.js"></script>
+        <script src="template/Registry/RegistryController.js"></script>
+        <script src="template/RSVP/RsvpController.js"></script>
+        <script src="js/mainService.js"></script>
+        <script src="js/facebookLoginService.js"></script>
+    </body>
+</html>
+
+<!--
+Colors//
+Maroon: rgba(66, 12, 14 , 1.00)
+Pink: rgba(191, 103, 101, 1.00)
+Green: rgba(147, 154, 118, 1.00)
+Gold? : #BF9465
+
+-->
